@@ -82,8 +82,7 @@ button {
 body {
   min-height: 100vh;
 
-  grid-template: repeat(2, auto) / minmax(min(225px, 100%), 1fr) 5fr;
-  /* grid-template: 1fr 2fr / minmax(min(225px, 100%), 1fr) 5fr; */
+  grid-template: min-content auto / minmax(min(225px, 100%), 1fr) 5fr;
   grid-template-areas:
     "sidebar header"
     "sidebar main";
@@ -99,12 +98,7 @@ aside {
   --vertical-space-between: calc(2 * var(--standard-spacing));
 }
 
-.navigation-link {
-  color: inherit;
-}
-
 header {
-  outline: 1px solid red;
   grid-area: header;
 
   --vertical-space-between: calc(1.5 * var(--standard-spacing));
@@ -114,12 +108,30 @@ header {
   row-gap: var(--vertical-space-between);
 
   --padding-inline: calc(3 * var(--standard-spacing));
-
   padding: var(--standard-spacing) var(--padding-inline);
 }
 
 main {
   grid-area: main;
+
+  grid-template: repeat(2, 1fr) / 3fr 1fr;
+
+  --padding-block: calc(2 * var(--standard-spacing));
+  padding: var(--padding-block) var(--standard-spacing);
+
+  background-color: var(--brand-gray);
+}
+
+.projects {
+  grid-row: span 2;
+}
+
+.project-cards-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+}
+
+.main-section-title {
+  padding-bottom: var(--standard-spacing);
 }
 
 .navigation,
@@ -127,8 +139,13 @@ main {
   margin-top: var(--vertical-space-between);
 }
 
+.navigation-link {
+  color: inherit;
+}
+
 .search,
-.greeting {
+.greeting,
+.action-buttons {
   grid-column: span 2;
 }
 
@@ -143,10 +160,6 @@ main {
 
 .notifs-and-profile {
   grid-column: -2 / -1;
-}
-
-.action-buttons {
-  grid-column: span 2;
 }
 
 .profile-picture {
@@ -183,7 +196,7 @@ main {
     padding-inline: 0;
   }
 
-  .title,
+  .dashboard-title,
   .navigation {
     padding-inline: var(--standard-spacing);
   }
