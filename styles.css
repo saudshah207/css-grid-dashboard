@@ -276,7 +276,7 @@ main {
 }
 
 .trending-project .username {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .navigation,
@@ -286,6 +286,8 @@ main {
 
 .navigation-link {
   color: inherit;
+
+  padding-bottom: var(--standard-spacing);
 }
 
 .search,
@@ -372,6 +374,10 @@ main {
 
   .navigation {
     scroll-padding-inline: var(--standard-spacing);
+  }
+
+  .navigation-link {
+    padding-bottom: 0;
   }
 
   .navigation > .others {
