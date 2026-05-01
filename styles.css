@@ -21,7 +21,6 @@
   --dominant-white: #ffffffff;
   --brand-blue: #3378ef;
   --brand-gray: #dbdff5;
-  --brand-powder-blush: #feb9b2;
 }
 
 .grid {
@@ -170,7 +169,7 @@ h3 {
 
 p,
 a {
-  font-size: clamp(1rem, 0.9em, 1.125rem);
+  font-size: clamp(1rem, 0.9em, 1.05rem);
 }
 
 button {
@@ -255,6 +254,10 @@ main {
   margin-bottom: var(--standard-spacing);
 }
 
+.announcement-entries {
+  font-size: 0.85em;
+}
+
 .announcement:not(:last-child) {
   border-bottom: 1px solid var(--brand-gray);
 }
@@ -277,6 +280,13 @@ main {
 
 .trending-project .username {
   font-weight: 600;
+}
+
+.project-description,
+.trending-project-title,
+.announcement-description {
+  --gray-text-color: #696969;
+  color: var(--gray-text-color);
 }
 
 .navigation,
