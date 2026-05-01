@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter/Inter-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +21,7 @@
   --dominant-white: #ffffffff;
   --brand-blue: #3378ef;
   --brand-gray: #dbdff5;
-  --brand-powder-blush: #FEB9B2;
+  --brand-powder-blush: #feb9b2;
 }
 
 .grid {
@@ -77,6 +85,8 @@ ul {
 
 button {
   cursor: pointer;
+
+  font-family: inherit;
 }
 
 button:not(.icon-only-button) {
@@ -110,6 +120,61 @@ body {
   grid-template-areas:
     "sidebar header"
     "sidebar main";
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-size: clamp(1rem, 0.5rem + 1.5vw, 1.25rem);
+}
+
+h1,
+h2,
+h3 {
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+h1 {
+  font-size: 1.331em;
+}
+
+h2 {
+  font-size: 1.21em;
+}
+
+h3 {
+  font-size: 1.1em;
+
+  margin-bottom: 0.5rem;
+}
+
+p,
+a {
+  font-size: clamp(1rem, 0.9em, 1.125rem);
+}
+
+button {
+  font-size: clamp(0.9rem, 0.8em, 1rem);
 }
 
 aside {
@@ -167,7 +232,7 @@ main {
 }
 
 .project-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -208,6 +273,10 @@ main {
 
 .trending-project > div {
   flex-grow: 1;
+}
+
+.trending-project .username {
+  font-weight: bold;
 }
 
 .navigation,
